@@ -1,0 +1,11 @@
+@import "p1";
+
+$midnight-blue : #2c3e50;
+
+body{
+  color:inherit;
+  background-color: $midnight-blue;
+  div{
+    background: yellowgreen;
+  }
+}

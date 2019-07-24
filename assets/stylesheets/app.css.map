@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./scss/app.scss"],"names":[],"mappings":"AAAA;AACA,0BAA0B;;AAE1B;AACA;AACA,4BAA4B;AAC5B;AACA,4BAA4B","file":"stylesheets/app.css","sourcesContent":["html {\n  color: mediumaquamarine; }\n\nbody {\n  color: inherit;\n  background-color: #2c3e50; }\n  body div {\n    background: yellowgreen; }\n"],"sourceRoot":""}
