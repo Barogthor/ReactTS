@@ -23,10 +23,10 @@ export function todoReducer(
                 })
             }
         case SWITCH_TODO:
+            const nextTodos = [...state.todos]
+            nextTodos[action.id].isDone = !state.todos[action.id].isDone
             return {
-                todos: state.todos.map( (todo, index) => {
-                    return {...todo, isDone: index==action.id ? !todo.isDone : todo.isDone}
-                })
+                todos: nextTodos
             }
         default:
             return state
