@@ -3,14 +3,14 @@ import * as PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import App from "./App";
-import Index from "./Index";
+import TodoListing from "../pages/TodoListing";
 
 
 const Root = ({ store }) => (
     <Provider store={store}>
         <Router>
             <App>
-                <Route exact path={"/"} component={Index} />
+                <Route exact path={"/"} component={TodoListing} />
             </App>
         </Router>
     </Provider>
