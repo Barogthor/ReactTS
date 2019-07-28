@@ -56,7 +56,7 @@ let config = {
     },
     devServer: {
         contentBase: ["./public","./assets"],
-        // historyApiFallback: true,
+        historyApiFallback: true,
         open: true,
         hot: true,
         port: 8090

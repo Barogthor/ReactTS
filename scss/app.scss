@@ -5,8 +5,38 @@ $midnight-blue : #2c3e50;
 body{
   color:inherit;
   //background-color: $midnight-blue;
-  background-color: whitesmoke;
   div{
-    background: grey;
+  }
+}
+
+.chessboard{
+  padding:0.5rem;
+  display: grid;
+  grid-template-columns: repeat(8,80px);
+  grid-template-rows: repeat(8,80px);
+  justify-content: center;
+}
+
+
+.chessboard-cell{
+  display: flex;
+  padding:0.5rem;
+  border: 1px solid black;
+  font-size: 4rem;
+  color: black;
+  align-items: center;
+  &.white{
+    background-color: #fff;
+  }
+  &.black{
+    background-color: #999;
+  }
+  &.focus, &.move{
+    //background-color: darkred;
+    box-shadow: inset 0px 0px 8px 4px gold;
+  }
+  &.target{
+    //background-color: darkred;
+    box-shadow: inset 0px 0px 8px 4px darkred;
   }
 }
