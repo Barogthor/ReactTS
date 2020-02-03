@@ -1,42 +1,55 @@
 @import "p1";
 
-$midnight-blue : #2c3e50;
+$midnight-blue: #2c3e50;
 
-body{
-  color:inherit;
+body {
+  color: inherit;
   //background-color: $midnight-blue;
-  div{
+  div {
   }
 }
 
-.chessboard{
-  padding:0.5rem;
+$chessboard-size: 640px;
+
+.chessboard {
+  padding: 0.5rem;
+  margin: 0 auto;
+  width: $chessboard-size;
   display: grid;
-  grid-template-columns: repeat(8,80px);
-  grid-template-rows: repeat(8,80px);
+  grid-template-columns: repeat(8, $chessboard-size/8);
+  grid-template-rows: repeat(8, $chessboard-size/8);
   justify-content: center;
+
+  //transform: translate(-5%, 0%) rotate(-30deg) skew(25deg);
 }
 
-
-.chessboard-cell{
+.chessboard-cell {
   display: flex;
-  padding:0.5rem;
+  padding: 0.5rem;
   border: 1px solid black;
   font-size: 4rem;
   color: black;
   align-items: center;
-  &.white{
+
+  &.white {
     background-color: #fff;
+    &.focus, &.move {
+      //background-color: darkred;
+      box-shadow: inset 0px 0px 8px 4px #a78d02;
+    }
   }
-  &.black{
+
+  &.black {
     background-color: #999;
+    &.focus, &.move {
+      //background-color: darkred;
+      box-shadow: inset 0px 0px 8px 4px gold;
+    }
   }
-  &.focus, &.move{
-    //background-color: darkred;
-    box-shadow: inset 0px 0px 8px 4px gold;
-  }
-  &.target{
+
+  &.target {
     //background-color: darkred;
     box-shadow: inset 0px 0px 8px 4px darkred;
   }
 }
+

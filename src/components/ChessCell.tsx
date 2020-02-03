@@ -6,7 +6,7 @@ interface ChessCellProps{
     color: string,
     cell: ChessCellItem,
     index?: number,
-    focusPawn: (index: number) => void
+    toggleFocus: (index: number) => void
     movePawn: (to: number) => void
     eatPawn: (to: number) => void
 }
@@ -19,8 +19,8 @@ class ChessCell extends React.Component<ChessCellProps>{
 
     clickCell(e : React.MouseEvent){
         const {cell} = this.props
-        if(cell.pawn && !cell.target)
-            this.props.focusPawn(this.props.index)
+        if(cell.pawn && !cell.target || cell.focus)
+            this.props.toggleFocus(this.props.index)
         if(!cell.pawn && cell.target)
             this.props.movePawn(this.props.index)
         if(cell.pawn && cell.target)
